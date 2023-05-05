@@ -6,11 +6,21 @@ import chess.Cell;
 
 /**
  * This is the Queen Class inherited from the abstract Piece class
- *
+ * @author ashish1294/Daniel Zanon Lopez
+ * @version JDK 20
+ * @since JDK 7
+ * @see <a href="https://github.com/ashish1294/ChessOOP">Proyecto original en Github</a>
  */
 public class Queen extends Piece{
 	
 	//Constructors
+
+    /**
+     *
+     * @param i
+     * @param p
+     * @param c
+     */
 	public Queen(String i,String p,int c)
 	{
 		setId(i);
@@ -19,6 +29,14 @@ public class Queen extends Piece{
 	}
 	
 	//Move Function Defined
+
+    /**
+     *
+     * @param state
+     * @param x
+     * @param y
+     * @return
+     */
 	public ArrayList<Cell> move(Cell state[][],int x,int y)
 	{
 		//Queen has most number of possible moves

@@ -6,11 +6,21 @@ import chess.Cell;
 
 /**
  * This is the Pawn Class inherited from the piece
- *
+ * @author ashish1294/Daniel Zanon Lopez
+ * @version JDK 20
+ * @since JDK 7
+ * @see <a href="https://github.com/ashish1294/ChessOOP">Proyecto original en Github</a>
  */
 public class Pawn extends Piece{
 	
 	//COnstructors
+
+    /**
+     *
+     * @param i
+     * @param p
+     * @param c
+     */
 	public Pawn(String i,String p,int c)
 	{
 		setId(i);
@@ -19,6 +29,14 @@ public class Pawn extends Piece{
 	}
 	
 	//Move Function Overridden
+
+    /**
+     *
+     * @param state
+     * @param x
+     * @param y
+     * @return
+     */
 	public ArrayList<Cell> move(Cell state[][],int x,int y)
 	{
 		//Pawn can move only one step except the first chance when it may move 2 steps

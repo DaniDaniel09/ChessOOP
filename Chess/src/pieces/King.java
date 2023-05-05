@@ -4,11 +4,28 @@ import java.util.ArrayList;
 
 import chess.Cell;
 
+/**
+ * This is the King Class.
+ * The Move Function defines the basic rules for movement of King on a chess board
+ * @author ashish1294/Daniel Zanon Lopez
+ * @version JDK 20
+ * @since JDK 7
+ * @see <a href="https://github.com/ashish1294/ChessOOP">Proyecto original en Github</a>
+ */
 public class King extends Piece{
 	
 	private int x,y; //Extra variables for King class to keep a track of king's position
 	
 	//King Constructor
+
+    /**
+     *
+     * @param i
+     * @param p
+     * @param c
+     * @param x
+     * @param y
+     */
 	public King(String i,String p,int c,int x,int y)
 	{
 		setx(x);
@@ -19,23 +36,51 @@ public class King extends Piece{
 	}
 	
 	//general value access functions
+
+    /**
+     *
+     * @param x
+     */
 	public void setx(int x)
 	{
 		this.x=x;
 	}
-	public void sety(int y)
+
+    /**
+     *
+     * @param y
+     */
+    public void sety(int y)
 	{
 		this.y=y;
 	}
-	public int getx()
+
+    /**
+     *
+     * @return
+     */
+    public int getx()
 	{
 		return x;
 	}
-	public int gety()
+
+    /**
+     *
+     * @return
+     */
+    public int gety()
 	{
 		return y;
 	}
 	//Move Function for King Overridden from Pieces
+
+    /**
+     *
+     * @param state
+     * @param x
+     * @param y
+     * @return
+     */
 	public ArrayList<Cell> move(Cell state[][],int x,int y)
 	{
 		//King can move only one step. So all the adjacent 8 cells have been considered.
@@ -53,6 +98,12 @@ public class King extends Piece{
 	
 	//Function to check if king is under threat
 	//It checks whether there is any piece of opposite color that can attack king for a given board state
+
+    /**
+     *
+     * @param state
+     * @return
+     */
 	public boolean isindanger(Cell state[][])
     {
 		

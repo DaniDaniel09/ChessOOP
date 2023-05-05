@@ -4,16 +4,24 @@ import java.util.ArrayList;
 
 import chess.Cell;
 
-
 /**
  * This is the Bishop Class.
  * The Move Function defines the basic rules for movement of Bishop on a chess board
- * 
- *
+ * @author ashish1294/Daniel Zanon Lopez
+ * @version JDK 20
+ * @since JDK 7
+ * @see <a href="https://github.com/ashish1294/ChessOOP">Proyecto original en Github</a>
  */
 public class Bishop extends Piece{
 	
 	//Constructor
+
+    /**
+     *
+     * @param i
+     * @param p
+     * @param c
+     */
 	public Bishop(String i,String p,int c)
 	{
 		setId(i);
@@ -23,6 +31,14 @@ public class Bishop extends Piece{
 	
 	//move function defined. It returns a list of all the possible destinations of a Bishop
 	//The basic principle of Bishop Movement on chess board has been implemented
+
+    /**
+     *
+     * @param state
+     * @param x
+     * @param y
+     * @return
+     */
 	public ArrayList<Cell> move(Cell state[][],int x,int y)
 	{
 		//Bishop can Move diagonally in all 4 direction (NW,NE,SW,SE)
